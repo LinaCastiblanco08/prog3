@@ -21,4 +21,15 @@ public class Entrada {
                 Difuntos temp = new Difuntos(datosDifuntos[0].charAt(0), datosDifuntos[1], datosDifuntos[2], datosDifuntos[3], datosDifuntos[4], datosDifuntos[5], datosDifuntos[6]);
                 difuntos.add(temp);
             }
-        
+        } catch (FileNotFoundException e) {
+            System.out.println("Error al leer el archivo de municipios: " + e.getMessage());
+        }
+    }
+    
+    public int[] difuntosPorGenero(){
+        int difuntosPorGenero[] = new int [2];
+        int i=0;
+        while (i<difuntos.size()){
+            Difuntos temp = difuntos.get(i);
+            
+            
