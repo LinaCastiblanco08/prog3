@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Estudiante
+ * @author Lina Castiblanco
  */
 public class Juego extends javax.swing.JFrame {
 
@@ -117,8 +117,8 @@ public class Juego extends javax.swing.JFrame {
         int slot3 = (int)(Math.random()*9+1);
         
         LB1.setText(String.valueOf(slot1));
-        LB2.setText(String.valueOf(slot1));
-        LB3.setText(String.valueOf(slot1));
+        LB2.setText(String.valueOf(slot2));
+        LB3.setText(String.valueOf(slot3));
         
         if (slot1 == slot2 && slot2 == slot3){
             switch (slot1){
@@ -142,6 +142,17 @@ public class Juego extends javax.swing.JFrame {
             }
         }
         lbMonedas.setText("MONEDAS "+String.valueOf(monedas));
+          if (monedas == 0){
+              int numero = JOptionPane.showConfirmDialog(this, 
+                      "Juegas de nuevo","Máquina Traga Monedas",
+                      JOptionPane.YES_NO_OPTION);
+              if (numero == 0){
+                  monedas = 30;
+                  lbMonedas.setText("MONEDAS "+String.valueOf(monedas));
+              }else {
+                  System.exit(0);
+              }
+          }
     }//GEN-LAST:event_playActionPerformed
 
     /**
