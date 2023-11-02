@@ -32,4 +32,41 @@ public class Entrada {
         while (i<difuntos.size()){
             Difuntos temp = difuntos.get(i);
             
+            switch (temp.sexo){
+                case 'M':   difuntosPorGenero[0]+=1;
+                            break;
+                case 'F':   difuntosPorGenero[1]+=1;
+                            break;
+                default:    System.out.println("Error: El sexo "+temp.sexo+" no esta dentro de los posibles.");
+                            break;
+            }
+            i++;
+        }
+        return difuntosPorGenero;
+    }
+    
+    public int[] difuntosMayor48Horas(){
+        int difuntos48[] = new int [2];
+        int i=0;
+        while (i<difuntos.size()){
+            Difuntos temp = difuntos.get(i);
             
+            if(temp.permanencia.equals("Mayor a 48 Horas")){
+                switch (temp.sexo) {
+                    case 'M':
+                        difuntos48[0] += 1;
+                        break;
+                    case 'F':
+                        difuntos48[1] += 1;
+                        break;
+                    default:
+                        System.out.println("Error: El sexo " + temp.sexo + " no esta dentro de los posibles.");
+                        break;
+                }
+            }
+            i++;
+        }
+        return difuntos48;
+    }
+   
+}
