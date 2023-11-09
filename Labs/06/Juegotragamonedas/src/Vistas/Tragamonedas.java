@@ -175,17 +175,17 @@ public class Tragamonedas extends javax.swing.JFrame {
                 tiempoMilisegundos = 0;
                 break;
             case 1:
-                tiempoMilisegundos = 100;
+                tiempoMilisegundos = 500;
                 break;
             case 2:
-                tiempoMilisegundos = 500;
+                tiempoMilisegundos = 100;
                 break;
             default:
                 tiempoMilisegundos = 0;   
         }
-        p1 = new Persona1(tiempoMilisegundos);
-        p2 = new Persona2(tiempoMilisegundos);
-        p3 = new Persona3(tiempoMilisegundos);
+        p1 = new Persona1(tiempoMilisegundos, lb1Persona1);
+        p2 = new Persona2(tiempoMilisegundos, lb2Persona2);
+        p3 = new Persona3(tiempoMilisegundos, lb3Persona3);
         respuesta1 = false;
         respuesta2 = false;
         respuesta3 = false;
@@ -194,7 +194,7 @@ public class Tragamonedas extends javax.swing.JFrame {
         p2.start();
         p3.start();
     }//GEN-LAST:event_lb5ActionPerformed
-
+   
     private void LB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LB2ActionPerformed
         // TODO add your handling code here:
         p1.stop();
