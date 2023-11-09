@@ -22,6 +22,7 @@ public class Tragamonedas extends javax.swing.JFrame {
     Persona2 p2;
     Persona3 p3;
     
+    
     boolean respuesta1 = false;
     boolean respuesta2 = false;
     boolean respuesta3 = false;
@@ -169,8 +170,9 @@ public class Tragamonedas extends javax.swing.JFrame {
 
     private void lb5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lb5ActionPerformed
         // TODO add your handling code here:
+        
         int tiempoMilisegundos = 0;
-       switch (lb6.getSelectedIndex()){
+        switch (lb6.getSelectedIndex()) {
             case 0:
                 tiempoMilisegundos = 0;
                 break;
@@ -181,11 +183,13 @@ public class Tragamonedas extends javax.swing.JFrame {
                 tiempoMilisegundos = 100;
                 break;
             default:
-                tiempoMilisegundos = 0;   
+                tiempoMilisegundos = 0;
         }
         p1 = new Persona1(tiempoMilisegundos, lb1Persona1);
         p2 = new Persona2(tiempoMilisegundos, lb2Persona2);
         p3 = new Persona3(tiempoMilisegundos, lb3Persona3);
+        
+        
         respuesta1 = false;
         respuesta2 = false;
         respuesta3 = false;
@@ -194,24 +198,21 @@ public class Tragamonedas extends javax.swing.JFrame {
         p2.start();
         p3.start();
     }//GEN-LAST:event_lb5ActionPerformed
-   
+
     private void LB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LB2ActionPerformed
-        // TODO add your handling code here:
-        p1.stop();
+        p1.paro();
         respuesta1 = true;
         comprobarResultado();
     }//GEN-LAST:event_LB2ActionPerformed
 
     private void LB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LB3ActionPerformed
-        // TODO add your handling code here:
-        p2.stop();
+        p2.paro();
         respuesta2 = true;
         comprobarResultado();
     }//GEN-LAST:event_LB3ActionPerformed
 
     private void LB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LB4ActionPerformed
-        // TODO add your handling code here:
-        p3.stop();
+        p3.paro();
         respuesta3 = true;
         comprobarResultado();
     }//GEN-LAST:event_LB4ActionPerformed
