@@ -159,7 +159,7 @@ public class fmrCarrera extends javax.swing.JFrame {
         Auto1.setLocation(0,Auto1.getLocation().y);
         Auto2.setLocation(0,Auto2.getLocation().y);
         Auto3.setLocation(0,Auto3.getLocation().y);
-        Auto1.setLocation(0,Auto4.getLocation().y);
+        Auto4.setLocation(0,Auto4.getLocation().y);
         
         carrera auto1 = new carrera(Auto1, this);
         carrera auto2 = new carrera(Auto2, this);

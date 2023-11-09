@@ -40,8 +40,8 @@ public class carrera extends Thread{
                 Auto3 = auto.getTercerAuto().getLocation().x;
                 Auto4 = auto.getCuartoAuto().getLocation().x;
                 
-                if(Auto1 < auto.getMeta().getLocation().x - 125 && Auto2 < auto.getMeta().getLocation().x - 125 && Auto3 < auto.getMeta().getLocation().x - 125 && Auto4 < auto.getMeta().getLocation().x - 125){
-                    etiqueta.setLocation(etiqueta.getLocation().x + 10,etiqueta.getLocation().y);
+                if(Auto1 < auto.getMeta().getLocation().x - 115 && Auto2 < auto.getMeta().getLocation().x - 115 && Auto3 < auto.getMeta().getLocation().x - 115 && Auto4 < auto.getMeta().getLocation().x - 115){
+                    etiqueta.setLocation(etiqueta.getLocation().x + 20,etiqueta.getY());
                     auto.repaint();  
                 }else{
                     break;
@@ -50,7 +50,7 @@ public class carrera extends Thread{
                 System.out.println(e);
             }
             
-            if(etiqueta.getLocation().x >= auto.getMeta().getLocation().x - 125){
+            if(etiqueta.getLocation().x >= auto.getMeta().getLocation().x - 115){
                 if(Auto1 > Auto2){
                     JOptionPane.showMessageDialog(null,"Gano el primer auto");
                 }
